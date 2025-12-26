@@ -7,32 +7,33 @@ export const tourData = {
   stops: [
     {
       id: 1,
-      name: "Stearns Wharf",
-      lat: 34.4087,
-      lng: -119.6857,
-      radius: 75,
-      narration: "Welcome to Stearns Wharf, California's oldest working wooden wharf. Built in 1872 by lumber merchant John Peck Stearns, this historic pier became the longest deep-water wharf between Los Angeles and San Francisco. Before its construction, passengers and cargo had to be rowed ashore through the breakers. The wharf transformed Santa Barbara from an isolated coastal town into a thriving commercial hub. Despite surviving earthquakes, storms, and fires including a devastating blaze in 1998, Stearns Wharf remains Santa Barbara's most visited landmark, now home to restaurants, shops, and the Sea Center marine museum. The iconic Dolphin Fountain at its entrance was created by local artist Bud Bottoms in 1982.",
-      content: "Built 1872 by John Peck Stearns • Longest deep-water wharf between LA & SF • Served passenger & freight shipping for 25+ years • Survived major fires in 1973 & 1998 • California's oldest working wooden wharf • 2,300 feet long, supported by 2,307 pilings",
+      name: "San Ysidro Ranch",
+      lat: 34.4369,
+      lng: -119.6344,
+      radius: 50,
+      narration: "Welcome to San Ysidro Ranch, a historic luxury resort nestled in the Montecito foothills. This 500-acre property dates back to 1893 and has hosted numerous celebrities and dignitaries over the decades. John F. Kennedy and Jackie Kennedy honeymooned here in 1953. The ranch features romantic cottages, award-winning gardens, and stunning mountain views. It has been a favorite retreat for Hollywood stars including Vivien Leigh, Laurence Olivier, and more recently, Oprah Winfrey who owns property nearby. The Stonehouse Restaurant is renowned for its farm-to-table cuisine and wine cellar.",
+      content: "Historic luxury resort est. 1893 • JFK & Jackie Kennedy honeymoon location (1953) • 500-acre property in Montecito foothills • Famous Hollywood retreat • Award-winning Stonehouse Restaurant • Romantic cottage accommodations",
       pointsOfInterest: [
-        "Dolphin Fountain",
-        "Sea Center marine museum",
-        "Harbor Restaurant (est. 1941)",
-        "Original railroad spur remnants"
+        "Stonehouse Restaurant",
+        "Historic gardens",
+        "Mountain views",
+        "Celebrity history"
       ]
     },
     {
       id: 2,
-      name: "Santa Barbara Harbor",
-      lat: 34.4036,
-      lng: -119.6916,
-      radius: 100,
-      narration: "You're now at Santa Barbara Harbor, a testament to one man's vision and generosity. Max Fleischmann, heir to the Fleischmann Yeast fortune, donated six hundred thousand dollars in 1926 to build this harbor because he wanted a safe mooring for his 250-foot yacht. For decades, the U.S. Army Corps of Engineers had rejected harbor proposals due to concerns about disrupting coastal sand flow. The breakwater was completed in 1928, and within seven years, sand accumulation created Leadbetter Beach and transformed the coastline. The harbor now requires dredging of 300,000 cubic yards of sand annually to remain open. It houses the Santa Barbara Maritime Museum, showcasing the region's rich nautical heritage dating back to the seafaring Chumash people who inhabited this coast for over 13,000 years.",
-      content: "Funded 1926 by Max Fleischmann • Breakwater completed 1928 • Created Leadbetter Beach through sand accretion • First harbor built without federal/state funding • Requires annual dredging of 300k cubic yards • Home to Maritime Museum & yacht facilities",
+      name: "Wiman Trailhead",
+      lat: 34.4425,
+      lng: -119.6308,
+      radius: 50,
+      narration: "You've arrived at the Wiman Trailhead, a popular starting point for hiking in the Montecito foothills. This trail provides access to the beautiful Santa Ynez Mountains and offers stunning views of the coastline and Channel Islands. The area is part of the extensive trail network that connects to Hot Springs Canyon and the San Ysidro Trail system. Montecito has long been known for its natural beauty, attracting nature lovers and outdoor enthusiasts. The trails here wind through coastal sage scrub and oak woodlands, providing habitat for local wildlife including deer, hawks, and occasionally mountain lions. On clear days, hikers are rewarded with panoramic views stretching from Point Conception to the Ventura coastline.",
+      content: "Popular Montecito hiking trailhead • Access to Santa Ynez Mountains • Connects to Hot Springs Canyon trails • Coastal sage scrub & oak woodland habitat • Panoramic ocean & island views • Part of extensive local trail network",
       pointsOfInterest: [
-        "Santa Barbara Maritime Museum",
-        "Breakwater walk",
-        "Santa Barbara Yacht Club (founded 1872)",
-        "Lil' Toot water taxi"
+        "Santa Ynez Mountain trails",
+        "Channel Islands views",
+        "Hot Springs Canyon access",
+        "Wildlife habitat",
+        "Coastal overlooks"
       ]
     },
     {
