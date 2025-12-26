@@ -2,8 +2,12 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { tourData } from '../data/tourData';
-import TourMap from './TourMap';
+import dynamic from 'next/dynamic';
 
+const TourMap = dynamic(() => import('./TourMap'), {
+  ssr: false,
+  loading: () => <div className="flex items-center justify-center h-full">Loading map...</div>
+});
 interface Position {
   latitude: number;
   longitude: number;
