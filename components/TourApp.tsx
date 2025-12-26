@@ -66,28 +66,38 @@ export default function TourApp() {
     }
   };
 
-  useEffect(() => {
-    if (!tourStarted || !currentPosition) return;
+useEffect(() => {
+  if (!tourStarted || !currentPosition) return;
 
-    for (const stop of tourData.stops) {
-      const distance = calculateDistance(
+  // Find all stops within trigger radius
+  const nearbyStops = tourData.stops
+    .map(stop => ({
+      stop,
+      distance: calculateDistance(
         currentPosition.latitude,
         currentPosition.longitude,
         stop.lat,
         stop.lng
-      );
+      )
+    }))
+    .filter(({ distance, stop }) => 
+      distance <= stop.radius && 
+      !completedStops.includes(stop.id)
+    )
+    .sort((a, b) => a.distance - b.distance);
 
-      if (distance <= stop.radius && lastSpokenStopRef.current !== stop.id) {
-        setCurrentStop(stop);
-        speak(stop.narration);
-        lastSpokenStopRef.current = stop.id;
-        if (!completedStops.includes(stop.id)) {
-          setCompletedStops(prev => [...prev, stop.id]);
-        }
-        break;
-      }
+  // Trigger the closest stop if different from last spoken
+  if (nearbyStops.length > 0) {
+    const closestStop = nearbyStops[0].stop;
+    
+    if (lastSpokenStopRef.current !== closestStop.id) {
+      setCurrentStop(closestStop);
+      speak(closestStop.narration);
+      lastSpokenStopRef.current = closestStop.id;
+      setCompletedStops(prev => [...prev, closestStop.id]);
     }
-  }, [currentPosition, tourStarted, completedStops]);
+  }
+}, [currentPosition, tourStarted, completedStops]);
 
   const startTour = () => {
     if ('geolocation' in navigator) {
